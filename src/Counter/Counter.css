@@ -1,0 +1,16 @@
+.counter {
+    min-width: 10vw;
+    padding: 20px;
+    font-size: 64px;
+    background: rgba(255, 255, 255, .1);
+    text-align: center;
+
+}
+
+.container {
+    text-align: center;
+}
+
+.button {
+    margin: 10px auto;
+}
