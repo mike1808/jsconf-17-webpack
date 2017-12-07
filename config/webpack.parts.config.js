@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -62,7 +63,7 @@ exports.cssLoader = ({ modules, minimize, sourceMap = true, importLoaders }) => 
     modules,
     minimize,
     sourceMap,
-    localIdentName: '[name]__[local]___[hash:base64:5]',
+    localIdentName: 'purify-[name]__[local]___[hash:base64:5]',
     importLoaders,
   },
 });
@@ -160,4 +161,15 @@ exports.autoprefix = () => ({
   options: {
     plugins: () => [require('autoprefixer')()],
   },
+});
+
+
+exports.purifyCSS = ({ paths, minimize }) => ({
+  plugins: [new PurifyCSSPlugin({
+    paths,
+    minimize,
+    purifyOptions: {
+      whitelist: ['*purify*'],
+    },
+  })],
 });

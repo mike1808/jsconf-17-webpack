@@ -1,5 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const glob = require('glob');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
@@ -80,6 +81,10 @@ const productionConfig = merge([
 
   parts.minifyJavaScript(),
   parts.envVar('production'),
+  parts.purifyCSS({
+    paths: glob.sync(`${paths.base}/**/*.js?(x)`, { nodir: true }),
+    minimize: true,
+  }),
 ]);
 
 module.exports = (env) => {
