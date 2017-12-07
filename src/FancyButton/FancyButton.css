@@ -1,0 +1,141 @@
+.bgGradient span {
+    background: #F6682F;
+    background: -webkit-linear-gradient(180deg, #F6682F 0%, #F6682F 80%, #F6682F 100%);
+    background: -webkit-linear-gradient(top, #F6682F 0%, #F6682F 80%, #F6682F 100%);
+    background: linear-gradient(180deg, #F6682F 0%, #F6682F 80%, #F6682F 100%);
+}
+
+/* fancy Button */
+.fancyButton {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Heebo', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: #ffffff;
+    position: relative;
+}
+
+.fancyButton:before {
+    content: '';
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    z-index: -1;
+    border-radius: 2em;
+    filter: blur(14px) brightness(0.9);
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-out;
+}
+
+.fancyButton i {
+    margin-top: -2px;
+    font-size: 1.265em;
+    vertical-align: middle;
+}
+
+.fancyButton span {
+    display: inline-block;
+    padding: 16px 20px;
+    border-radius: 50em;
+    position: relative;
+    z-index: 2;
+    will-change: transform, filter;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-out;
+}
+
+.fancyButton:focus {
+    color: #ffffff;
+}
+
+.fancyButton:hover {
+    color: #ffffff;
+}
+
+.fancyButton:hover span {
+    filter: brightness(0.9) contrast(1.2);
+    transform: scale(0.96);
+}
+
+.fancyButton:hover:before {
+    bottom: 3px;
+    filter: blur(6px) brightness(0.8);
+}
+
+.fancyButton:active span {
+    filter: brightness(0.75) contrast(1.7);
+}
+
+.fancyButton.popOnhover span {
+    border-radius: 4px;
+}
+
+.fancyButton.popOnhover:before {
+    opacity: 0;
+    bottom: 10px;
+}
+
+.fancyButton.popOnhover:hover:before {
+    bottom: -7px;
+    opacity: 1;
+    filter: blur(16px);
+}
+
+.fancyButton.popOnhover:hover span {
+    transform: scale(1);
+}
+
+.fancyButton.popOnhover:hover:active span {
+    filter: brightness(1) contrast(1);
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+
+.fancyButton.popOnhover:hover:active:before {
+    bottom: 0;
+    filter: blur(5px) brightness(0.85);
+    transition: all 0.2s ease-out;
+}
+
+.bgGradient:before {
+    bottom: 2px;
+    opacity: 0.6;
+    transition: all 0.3s ease-out;
+}
+
+.bgGradient {
+    transition: all 1s ease;
+}
+
+.bgGradient span {
+    outline: 0px solid transparent;
+}
+
+.bgGradient:hover span {
+    background: #FC3D7C;
+    background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+}
+
+.bgGradient:focus span, .bgGradient:active span {
+    background: #FC3D7C;
+    background: linear-gradient(25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+}
+
+.bgGradient:focus span {
+    box-shadow: 0 0 9px #00FFF8;
+}
+
+.bgGradient:active span {
+    filter: brightness(0.85) contrast(1.3);
+}
+
+.bgGradient span {
+    text-transform: capitalize;
+}

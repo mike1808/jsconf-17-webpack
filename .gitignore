@@ -58,4 +58,8 @@ typings/
 .env
 
 .idea
-dist
+dist/
+
+!dist/index.html
+
+stats.json
