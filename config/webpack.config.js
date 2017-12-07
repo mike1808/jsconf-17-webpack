@@ -63,6 +63,7 @@ const developmentConfig = merge([
   parts.sourceMaps('cheap-module-source-map'),
   parts.devServer({ host: process.env.HOST, port: process.env.PORT }),
   parts.loadStyles(),
+  parts.envVar('development'),
 ]);
 
 const productionConfig = merge([
@@ -72,6 +73,7 @@ const productionConfig = merge([
   parts.loadStyles({ minimize: true }),
 
   parts.minifyJavaScript(),
+  parts.envVar('production'),
 ]);
 
 module.exports = (env) => {

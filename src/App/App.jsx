@@ -15,6 +15,9 @@ class App extends Component {
   }
 
   toggleShown() {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`The current state of \`shown\` is ${this.state.shown}.`);
+    }
     this.setState({ shown: !this.state.shown });
   }
 

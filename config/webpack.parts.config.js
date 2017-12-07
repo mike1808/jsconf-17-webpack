@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 
@@ -112,4 +113,12 @@ exports.sourceMaps = method => ({
 
 exports.minifyJavaScript = () => ({
   plugins: [new UglifyWebpackPlugin({ sourceMap: true })],
+});
+
+exports.envVar = env => ({
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(env),
+    }),
+  ],
 });
