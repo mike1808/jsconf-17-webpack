@@ -1,4 +1,5 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -107,4 +108,8 @@ exports.loadImages = options => ({
 
 exports.sourceMaps = method => ({
   devtool: method,
+});
+
+exports.minifyJavaScript = () => ({
+  plugins: [new UglifyWebpackPlugin({ sourceMap: true })],
 });

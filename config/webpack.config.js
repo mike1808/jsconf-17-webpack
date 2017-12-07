@@ -52,7 +52,6 @@ const commonConfig = merge([
       name: '[name].[ext]',
     },
   }),
-  parts.loadStyles(),
   parts.loadImages({
     limit: 8192,
     name: '[name].[ext]',
@@ -63,11 +62,16 @@ const commonConfig = merge([
 const developmentConfig = merge([
   parts.sourceMaps('cheap-module-source-map'),
   parts.devServer({ host: process.env.HOST, port: process.env.PORT }),
+  parts.loadStyles(),
 ]);
 
 const productionConfig = merge([
   parts.sourceMaps('source-map'),
   parts.cleanup([paths.dist]),
+
+  parts.loadStyles({ minimize: true }),
+
+  parts.minifyJavaScript(),
 ]);
 
 module.exports = (env) => {
