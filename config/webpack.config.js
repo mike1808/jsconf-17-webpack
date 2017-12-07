@@ -71,7 +71,10 @@ const productionConfig = merge([
   parts.cleanup([paths.dist]),
 
   parts.extractCSS({
-    use: parts.cssLoader({ minimize: true, sourceMap: true, modules: true }),
+    use: [
+      parts.cssLoader({ minimize: true, sourceMap: true, modules: true }),
+      parts.autoprefix(),
+    ],
     filename: '[name].css',
   }),
 

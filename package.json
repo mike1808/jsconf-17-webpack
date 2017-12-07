@@ -21,6 +21,10 @@
     "url": "https://github.com/mike1808/jsconf-17-webpack/issues"
   },
   "homepage": "https://github.com/mike1808/jsconf-17-webpack#readme",
+  "browserslist": [
+    ">1%",
+    "ie 11"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.34",
     "@babel/preset-es2015": "^7.0.0-beta.34",

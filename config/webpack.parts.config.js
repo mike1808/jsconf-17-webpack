@@ -154,3 +154,10 @@ exports.extractCSS = ({ use, filename, minimize, sourceMap }) => {
     plugins: [plugin],
   };
 };
+
+exports.autoprefix = () => ({
+  loader: 'postcss-loader',
+  options: {
+    plugins: () => [require('autoprefixer')()],
+  },
+});
