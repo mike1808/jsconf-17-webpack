@@ -70,7 +70,10 @@ const productionConfig = merge([
   parts.sourceMaps('source-map'),
   parts.cleanup([paths.dist]),
 
-  parts.loadStyles({ minimize: true }),
+  parts.extractCSS({
+    use: parts.cssLoader({ minimize: true, sourceMap: true, modules: true }),
+    filename: '[name].css',
+  }),
 
   parts.minifyJavaScript(),
   parts.envVar('production'),

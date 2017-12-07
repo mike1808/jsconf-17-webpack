@@ -7,37 +7,63 @@
 > jsconf-17-webpack@1.0.0 build /home/michael/workspace_my/jsconf-17-webpack
 > webpack --config config/webpack.config.js --env production
 
-Hash: e7c961de69b5193cb980
+Hash: d16a86dd793c3a770a5b
 Version: webpack 3.10.0
-Time: 5594ms
+Time: 5211ms
                     Asset       Size  Chunks                    Chunk Names
-  fontawesome-webfont.eot     166 kB          [emitted]         
+  fontawesome-webfont.svg     444 kB          [emitted]  [big]  
+                   bg.jpg     297 kB          [emitted]  [big]  
 fontawesome-webfont.woff2    77.2 kB          [emitted]         
  fontawesome-webfont.woff      98 kB          [emitted]         
   fontawesome-webfont.ttf     166 kB          [emitted]         
-  fontawesome-webfont.svg     444 kB          [emitted]  [big]  
-                   bg.jpg     297 kB          [emitted]  [big]  
-                bundle.js     304 kB       0  [emitted]  [big]  app
-            bundle.js.map     886 kB       0  [emitted]         app
-               index.html  348 bytes          [emitted]         
- [129] ./FancyButton/index.js 68 bytes {0} [built]
- [130] ./app.jsx 186 bytes {0} [built]
- [342] ./App/index.js 44 bytes {0} [built]
- [343] ./App/App.jsx 3.23 kB {0} [built]
- [344] ./Logo/index.js 47 bytes {0} [built]
- [345] ./Logo/Logo.jsx 404 bytes {0} [built]
- [346] ./Logo/Logo.css 1.07 kB {0} [built]
- [350] ./FancyButton/FancyButton.jsx 735 bytes {0} [built]
- [358] ./Counter/index.js 56 bytes {0} [built]
- [359] ./Counter/Counter.jsx 3.49 kB {0} [built]
- [360] ./CounterIcon/index.js 68 bytes {0} [built]
- [370] ./Counter/Counter.css 1.08 kB {0} [built]
- [372] ./App/App.css 1.07 kB {0} [built]
- [373] ../node_modules/css-loader?{"modules":true,"minimize":true,"sourceMap":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./App/App.css 1.29 kB {0} [built]
- [374] ./App/bg.jpg 52 bytes {0} [built]
-    + 360 hidden modules
+  fontawesome-webfont.eot     166 kB          [emitted]         
+                bundle.js     194 kB       0  [emitted]         app
+                  app.css    44.4 kB       0  [emitted]         app
+            bundle.js.map     733 kB       0  [emitted]         app
+              app.css.map    64.9 kB       0  [emitted]         app
+               index.html  387 bytes          [emitted]         
+ [127] ./FancyButton/index.js 68 bytes {0} [built]
+ [128] ./app.jsx 186 bytes {0} [built]
+ [340] ./App/index.js 44 bytes {0} [built]
+ [341] ./App/App.jsx 3.23 kB {0} [built]
+ [342] ./Logo/index.js 47 bytes {0} [built]
+ [343] ./Logo/Logo.jsx 404 bytes {0} [built]
+ [344] ./Logo/Logo.css 151 bytes {0} [built]
+ [345] ./FancyButton/FancyButton.jsx 735 bytes {0} [built]
+ [351] ./FancyButton/FancyButton.css 204 bytes {0} [built]
+ [352] ./Counter/index.js 56 bytes {0} [built]
+ [353] ./Counter/Counter.jsx 3.49 kB {0} [built]
+ [354] ./CounterIcon/index.js 68 bytes {0} [built]
+ [355] ./CounterIcon/CounterIcon.jsx 256 bytes {0} [built]
+ [357] ./Counter/Counter.css 174 bytes {0} [built]
+ [358] ./App/App.css 86 bytes {0} [built]
+    + 344 hidden modules
 Child html-webpack-plugin for "index.html":
      1 asset
        [0] ../node_modules/html-webpack-plugin/lib/loader.js!./index.html 659 bytes {0} [built]
         + 3 hidden modules
+Child extract-text-webpack-plugin ../node_modules/extract-text-webpack-plugin/dist ../node_modules/css-loader/index.js??ref--3-oneOf-1-1!Counter/Counter.css:
+       [0] ../node_modules/css-loader?{"modules":true,"minimize":true,"sourceMap":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./Counter/Counter.css 1.04 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin ../node_modules/extract-text-webpack-plugin/dist ../node_modules/css-loader/index.js??ref--3-oneOf-1-1!FancyButton/FancyButton.css:
+       [0] ../node_modules/css-loader?{"modules":true,"minimize":true,"sourceMap":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./FancyButton/FancyButton.css 7.49 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin ../node_modules/extract-text-webpack-plugin/dist ../node_modules/css-loader/index.js??ref--3-oneOf-1-1!Logo/Logo.css:
+       [0] ../node_modules/css-loader?{"modules":true,"minimize":true,"sourceMap":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./Logo/Logo.css 1.58 kB {0} [built]
+       [2] ./Logo/logo.svg 3.33 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin ../node_modules/extract-text-webpack-plugin/dist ../node_modules/css-loader/index.js??ref--3-oneOf-1-1!App/App.css:
+     Asset    Size  Chunks                    Chunk Names
+    bg.jpg  297 kB          [emitted]  [big]  
+       [0] ../node_modules/css-loader?{"modules":true,"minimize":true,"sourceMap":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./App/App.css 1.29 kB {0} [built]
+       [2] ./App/bg.jpg 52 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin ../node_modules/extract-text-webpack-plugin/dist ../node_modules/css-loader/index.js??ref--3-oneOf-0-1!../node_modules/font-awesome/css/font-awesome.css:
+                        Asset     Size  Chunks                    Chunk Names
+      fontawesome-webfont.eot   166 kB          [emitted]         
+    fontawesome-webfont.woff2  77.2 kB          [emitted]         
+     fontawesome-webfont.woff    98 kB          [emitted]         
+      fontawesome-webfont.ttf   166 kB          [emitted]         
+      fontawesome-webfont.svg   444 kB          [emitted]  [big]  
+       8 modules
 ```

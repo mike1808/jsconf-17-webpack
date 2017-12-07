@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -122,3 +123,34 @@ exports.envVar = env => ({
     }),
   ],
 });
+
+exports.extractCSS = ({ use, filename, minimize, sourceMap }) => {
+  const plugin = new ExtractTextPlugin({
+    allChunks: true,
+    filename,
+  });
+
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          oneOf: [
+            {
+              include: /node_modules/,
+              use: plugin.extract({
+                use: exports.cssLoader({ modules: false, minimize, sourceMap }),
+              }),
+            },
+            {
+              exclude: /node_modules/,
+              use: plugin.extract({
+                use,
+              }),
+            }],
+        },
+      ],
+    },
+    plugins: [plugin],
+  };
+};
