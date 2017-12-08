@@ -109,6 +109,8 @@ const productionConfig = merge([
     paths: glob.sync(`${paths.base}/**/*.js?(x)`, { nodir: true }),
     minimize: true,
   }),
+
+  parts.scopeHoisting(),
 ]);
 
 module.exports = (env) => {

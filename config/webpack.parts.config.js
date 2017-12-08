@@ -183,3 +183,6 @@ exports.extractChunks = bundles => ({
 
 exports.isVendor = module => /node_modules/.test(module.resource);
 
+exports.scopeHoisting = () => ({
+  plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
+});
