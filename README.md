@@ -1,5 +1,31 @@
 # Armenia JSConf 17 Webpack Production Config
 
+This a step-by-step guide for creating a production ready Webpack config.
+The steps are implemented via git tags.
+
+- 1.0-inital-project
+- 2.0-code-minification
+- 3.0-free-variables
+- 4.0-extract-css
+- 4.1-autoprefixer
+- 4.2-css-rules-optimization
+- 5.0-transpile-less
+- 6.0-bundle-splitting-manual
+- 6.1-bundle-splitting-auto
+- 7.0-caching
+- 8.0-code-splitting
+- 8.1-async-common-chunk
+- 9.0-scope-hoisting
+- 10.0-image-optimization
+- 11.0-code-versioning
+- 12.0-analyze
+
+## Materials
+
+Presentation [mike1808/jsconf-17-webpack-presentation](https://github.com/mike1808/jsconf-17-webpack-presentation)
+
+Video: TBD
+
 ## Output
 
 ```bash
