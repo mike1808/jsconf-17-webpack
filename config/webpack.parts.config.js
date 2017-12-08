@@ -186,3 +186,39 @@ exports.isVendor = module => /node_modules/.test(module.resource);
 exports.scopeHoisting = () => ({
   plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 });
+
+exports.loadOptimizedImages = options => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)/,
+        use: [
+          {
+            loader: 'file-loader',
+            options,
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              gifsicle: {
+                interlaced: false,
+              },
+              optipng: {
+                optimizationLevel: 7,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+              mozjpeg: {
+                progressive: true,
+                quality: 85,
+              },
+              svgo: {},
+            },
+          },
+        ],
+      },
+    ],
+  },
+});

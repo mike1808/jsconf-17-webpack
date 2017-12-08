@@ -58,10 +58,6 @@ const commonConfig = merge([
       name: '[name].[ext]',
     },
   }),
-  parts.loadImages({
-    limit: 8192,
-    name: '[name].[ext]',
-  }),
 ]);
 
 
@@ -71,6 +67,10 @@ const developmentConfig = merge([
   parts.loadStyles(),
   { plugins: [new webpack.NamedModulesPlugin()] },
   parts.envVar('development'),
+  parts.loadImages({
+    limit: 8192,
+    name: '[name].[ext]',
+  }),
 ]);
 
 const productionConfig = merge([
@@ -111,6 +111,9 @@ const productionConfig = merge([
   }),
 
   parts.scopeHoisting(),
+  parts.loadOptimizedImages({
+    name: '[name].[hash].[ext]',
+  }),
 ]);
 
 module.exports = (env) => {
