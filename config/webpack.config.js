@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const glob = require('glob');
+const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
@@ -23,7 +24,7 @@ const commonConfig = merge([
       app: paths.app,
     },
     output: {
-      filename: '[name].bundle.js',
+      filename: '[name].[chunkhash].js',
       publicPath: '/',
       path: paths.dist,
     },
@@ -66,6 +67,7 @@ const developmentConfig = merge([
   parts.sourceMaps('cheap-module-source-map'),
   parts.devServer({ host: process.env.HOST, port: process.env.PORT }),
   parts.loadStyles(),
+  { plugins: [new webpack.NamedModulesPlugin()] },
   parts.envVar('development'),
 ]);
 
@@ -88,6 +90,10 @@ const productionConfig = merge([
     {
       name: 'vendor',
       minChunks: parts.isVendor,
+    },
+    {
+      name: 'manifest',
+      minChunks: Infinity,
     },
   ]),
 
