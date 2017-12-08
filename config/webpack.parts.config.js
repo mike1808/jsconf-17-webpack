@@ -173,3 +173,7 @@ exports.purifyCSS = ({ paths, minimize }) => ({
     },
   })],
 });
+
+exports.extractChunks = bundles => ({
+  plugins: bundles.map(bundle => new webpack.optimize.CommonsChunkPlugin(bundle)),
+});

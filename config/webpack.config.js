@@ -21,9 +21,14 @@ const commonConfig = merge([
     context: paths.base,
     entry: {
       app: paths.app,
+      vendor: [
+        'react',
+        'react-dom',
+        'prop-types',
+      ],
     },
     output: {
-      filename: 'bundle.js',
+      filename: '[name].bundle.js',
       publicPath: '/',
       path: paths.dist,
     },
@@ -83,6 +88,13 @@ const productionConfig = merge([
 
   parts.minifyJavaScript(),
   parts.envVar('production'),
+
+  parts.extractChunks([
+    {
+      name: 'vendor',
+    }
+  ]),
+
   parts.purifyCSS({
     paths: glob.sync(`${paths.base}/**/*.js?(x)`, { nodir: true }),
     minimize: true,
