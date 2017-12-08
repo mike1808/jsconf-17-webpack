@@ -94,6 +94,12 @@ const productionConfig = merge([
       minChunks: parts.isVendor,
     },
     {
+      async: 'async-common',
+      children: true,
+      deepChildren: true,
+      minChunks: 2,
+    },
+    {
       name: 'manifest',
       minChunks: Infinity,
     },

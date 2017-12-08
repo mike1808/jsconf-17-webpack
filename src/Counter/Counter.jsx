@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FancyButton from '../FancyButton';
 import withLoadable from '../withLoadable';
+import reusableModule from '../reusableModule';
 import styles from './Counter.css';
 
 const CounterIcon = withLoadable(() => import(/* webpackChunkName: "counter-icon" */ '../CounterIcon'));
@@ -18,6 +19,8 @@ class Counter extends Component {
     }, 1000);
 
     this.reset = this.reset.bind(this);
+
+    reusableModule();
   }
 
   componentWillUnmount() {
