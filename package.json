@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.34",
-    "@babel/preset-es2015": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
     "@babel/preset-react": "^7.0.0-beta.34",
     "autoprefixer": "^7.2.1",
     "babel-eslint": "^8.0.3",
@@ -62,10 +62,12 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.34",
     "classnames": "^2.2.5",
+    "core-js": "^2.5.1",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-loadable": "^5.3.1"
+    "react-loadable": "^5.3.1",
+    "regenerator-runtime": "^0.11.1"
   }
 }

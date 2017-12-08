@@ -41,8 +41,10 @@ const commonConfig = merge([
   parts.loadJs({
     babelOptions: {
       presets: [
-        ['@babel/preset-es2015', {
+        ['@babel/preset-env', {
           modules: false,
+          useBuiltIns: 'entry',
+          shippedProposals: true,
         }],
         '@babel/react',
       ],
