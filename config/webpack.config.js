@@ -117,10 +117,17 @@ const productionConfig = merge([
   parts.attachRevision(),
 ]);
 
+const analyzeConfig = merge([
+  parts.analyze(),
+]);
+
+
 module.exports = (env) => {
-  if (env === 'production') {
-    return merge(commonConfig, productionConfig);
+  const config = merge(commonConfig, env === 'production' ? productionConfig : developmentConfig);
+
+  if (process.env.npm_config_analyze) {
+    return merge(config, analyzeConfig);
   }
 
-  return merge(commonConfig, developmentConfig);
+  return config;
 };

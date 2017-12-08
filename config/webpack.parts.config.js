@@ -4,6 +4,7 @@ const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -232,3 +233,10 @@ exports.attachRevision = () => ({
     }),
   ],
 });
+
+exports.analyze = () => ({
+  plugins: [
+    new BundleAnalyzerPlugin(),
+  ],
+});
+
