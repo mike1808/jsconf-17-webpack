@@ -7,39 +7,41 @@
 > jsconf-17-webpack@1.0.0 build /home/michael/workspace_my/jsconf-17-webpack
 > webpack --config config/webpack.config.js --env production
 
-Hash: e3c94c1a3af02d233243
+Hash: 08440db2db615e8424b6
 Version: webpack 3.10.0
-Time: 5331ms
+Time: 5389ms
                     Asset       Size  Chunks                    Chunk Names
-            app.bundle.js    72.2 kB       0  [emitted]         app
+         vendor.bundle.js     166 kB       1  [emitted]         vendor
                    bg.jpg     297 kB          [emitted]  [big]  
 fontawesome-webfont.woff2    77.2 kB          [emitted]         
  fontawesome-webfont.woff      98 kB          [emitted]         
   fontawesome-webfont.ttf     166 kB          [emitted]         
   fontawesome-webfont.svg     444 kB          [emitted]  [big]  
+            app.bundle.js    7.36 kB       0  [emitted]         app
   fontawesome-webfont.eot     166 kB          [emitted]         
-         vendor.bundle.js     101 kB       1  [emitted]         vendor
-                  app.css    9.07 kB       0  [emitted]         app
-        app.bundle.js.map     335 kB       0  [emitted]         app
+                  app.css    7.88 kB       0  [emitted]         app
+               vendor.css    1.23 kB       1  [emitted]         vendor
+        app.bundle.js.map    9.54 kB       0  [emitted]         app
               app.css.map   84 bytes       0  [emitted]         app
-     vendor.bundle.js.map     256 kB       1  [emitted]         vendor
-               index.html  455 bytes          [emitted]         
-  [99] ./FancyButton/index.js 68 bytes {0} [built]
- [101] ./app.jsx 4.65 kB {0} [built]
- [225] ./App/index.js 44 bytes {0} [built]
- [226] ./App/App.jsx 3.03 kB {0} [built]
- [227] ./Logo/index.js 47 bytes {0} [built]
- [228] ./Logo/Logo.jsx 404 bytes {0} [built]
- [229] ./Logo/Logo.css 172 bytes {0} [built]
- [230] ./FancyButton/FancyButton.jsx 735 bytes {0} [built]
+     vendor.bundle.js.map     585 kB       1  [emitted]         vendor
+           vendor.css.map   87 bytes       1  [emitted]         vendor
+               index.html  497 bytes          [emitted]         
+  [98] ./FancyButton/index.js 68 bytes {0} [built]
+  [99] ./app.jsx 4.65 kB {0} [built]
+ [224] ./App/index.js 44 bytes {0} [built]
+ [225] ./App/App.jsx 3.03 kB {0} [built]
+ [226] ./Logo/index.js 47 bytes {0} [built]
+ [227] ./Logo/Logo.jsx 404 bytes {0} [built]
+ [228] ./Logo/Logo.css 172 bytes {0} [built]
+ [229] ./FancyButton/FancyButton.jsx 735 bytes {0} [built]
  [235] ./FancyButton/FancyButton.css 225 bytes {0} [built]
  [236] ./Counter/index.js 56 bytes {0} [built]
  [237] ./Counter/Counter.jsx 3.29 kB {0} [built]
  [238] ./CounterIcon/index.js 68 bytes {0} [built]
+ [239] ./CounterIcon/CounterIcon.jsx 256 bytes {0} [built]
  [241] ./Counter/Counter.css 195 bytes {0} [built]
  [242] ./App/App.css 93 bytes {0} [built]
- [243] multi react react-dom prop-types 52 bytes {1} [built]
-    + 229 hidden modules
+    + 228 hidden modules
 Child html-webpack-plugin for "index.html":
      1 asset
        [0] ../node_modules/html-webpack-plugin/lib/loader.js!./index.html 659 bytes {0} [built]

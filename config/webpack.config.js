@@ -21,11 +21,6 @@ const commonConfig = merge([
     context: paths.base,
     entry: {
       app: paths.app,
-      vendor: [
-        'react',
-        'react-dom',
-        'prop-types',
-      ],
     },
     output: {
       filename: '[name].bundle.js',
@@ -92,7 +87,8 @@ const productionConfig = merge([
   parts.extractChunks([
     {
       name: 'vendor',
-    }
+      minChunks: parts.isVendor,
+    },
   ]),
 
   parts.purifyCSS({
