@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
 
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -221,4 +222,13 @@ exports.loadOptimizedImages = options => ({
       },
     ],
   },
+});
+
+
+exports.attachRevision = () => ({
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: new GitRevisionPlugin().version(),
+    }),
+  ],
 });

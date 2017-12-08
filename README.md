@@ -9,30 +9,30 @@
 
 Hash: b2405c73813341b4f647
 Version: webpack 3.10.0
-Time: 7153ms
+Time: 6468ms
                                                    Asset       Size  Chunks             Chunk Names
-                    counter-icon.25bc583f2fed797c31c4.js  390 bytes       5  [emitted]  counter-icon
+                    counter-icon.25bc583f2fed797c31c4.js  405 bytes       5  [emitted]  counter-icon
                logo.2c1a70ce3b206bd62d6879e9a6df9616.svg    1.32 kB          [emitted]  
 fontawesome-webfont.677433a0892aaed7b7d2628c313c9775.svg    6 bytes          [emitted]  
                                  fontawesome-webfont.ttf     166 kB          [emitted]  
                                 fontawesome-webfont.woff      98 kB          [emitted]  
                                fontawesome-webfont.woff2    77.2 kB          [emitted]  
                  bg.51b4c95613a415ab6f5c9244b9cdcbfd.jpg     192 kB          [emitted]  
-                async-common-app.9c411f7cc115d7c6585f.js  175 bytes       0  [emitted]  async-common-app
-                            logo.202ec99b224261938599.js  649 bytes       1  [emitted]  logo
-                         counter.b6955471c29f92b3cf53.js    2.23 kB       2  [emitted]  counter
+                async-common-app.9c411f7cc115d7c6585f.js  190 bytes       0  [emitted]  async-common-app
+                            logo.202ec99b224261938599.js  664 bytes       1  [emitted]  logo
+                         counter.b6955471c29f92b3cf53.js    2.24 kB       2  [emitted]  counter
                           vendor.5edba6bf4ffad8be3e69.js     173 kB       3  [emitted]  vendor
-                             app.de3abaffafa27afcdb13.js    4.27 kB       4  [emitted]  app
+                             app.de3abaffafa27afcdb13.js    4.28 kB       4  [emitted]  app
                                  fontawesome-webfont.eot     166 kB          [emitted]  
-                        manifest.025f4225b819553b8adb.js    1.66 kB       6  [emitted]  manifest
-                                                 app.css    5.87 kB       4  [emitted]  app
-            async-common-app.9c411f7cc115d7c6585f.js.map  345 bytes       0  [emitted]  async-common-app
+                        manifest.025f4225b819553b8adb.js    1.68 kB       6  [emitted]  manifest
+                                                 app.css    5.88 kB       4  [emitted]  app
+            async-common-app.9c411f7cc115d7c6585f.js.map  346 bytes       0  [emitted]  async-common-app
                         logo.202ec99b224261938599.js.map     1.5 kB       1  [emitted]  logo
                      counter.b6955471c29f92b3cf53.js.map    3.14 kB       2  [emitted]  counter
                       vendor.5edba6bf4ffad8be3e69.js.map     593 kB       3  [emitted]  vendor
                          app.de3abaffafa27afcdb13.js.map    6.77 kB       4  [emitted]  app
                                              app.css.map   84 bytes       4  [emitted]  app
-                counter-icon.25bc583f2fed797c31c4.js.map  948 bytes       5  [emitted]  counter-icon
+                counter-icon.25bc583f2fed797c31c4.js.map  949 bytes       5  [emitted]  counter-icon
                     manifest.025f4225b819553b8adb.js.map    8.17 kB       6  [emitted]  manifest
                                               index.html  563 bytes          [emitted]  
 [04Qr] ./App/App.css 93 bytes {4} [built]

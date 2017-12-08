@@ -114,6 +114,7 @@ const productionConfig = merge([
   parts.loadOptimizedImages({
     name: '[name].[hash].[ext]',
   }),
+  parts.attachRevision(),
 ]);
 
 module.exports = (env) => {
