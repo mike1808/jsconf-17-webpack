@@ -7,43 +7,45 @@
 > jsconf-17-webpack@1.0.0 build /home/michael/workspace_my/jsconf-17-webpack
 > webpack --config config/webpack.config.js --env production
 
-Hash: 308d608b890f2e87623c
+Hash: 11f6f2668b77c832135d
 Version: webpack 3.10.0
-Time: 5426ms
-                               Asset       Size  Chunks                    Chunk Names
-    manifest.a1a47299913d6deb3af6.js    1.48 kB       2  [emitted]         manifest
-                              bg.jpg     297 kB          [emitted]  [big]  
-             fontawesome-webfont.svg     444 kB          [emitted]  [big]  
-             fontawesome-webfont.ttf     166 kB          [emitted]         
-            fontawesome-webfont.woff      98 kB          [emitted]         
-           fontawesome-webfont.woff2    77.2 kB          [emitted]         
-      vendor.e62c325562c57542c97d.js     169 kB       0  [emitted]         vendor
-         app.e2a237fc75a8a797d0d1.js    7.77 kB       1  [emitted]         app
-             fontawesome-webfont.eot     166 kB          [emitted]         
-                             app.css    7.88 kB       1  [emitted]         app
-                          vendor.css    1.23 kB       0  [emitted]         vendor
-  vendor.e62c325562c57542c97d.js.map     578 kB       0  [emitted]         vendor
-                      vendor.css.map   87 bytes       0  [emitted]         vendor
-     app.e2a237fc75a8a797d0d1.js.map    9.55 kB       1  [emitted]         app
-                         app.css.map   84 bytes       1  [emitted]         app
-manifest.a1a47299913d6deb3af6.js.map    7.78 kB       2  [emitted]         manifest
-                          index.html  605 bytes          [emitted]         
-[04Qr] ./App/App.css 93 bytes {1} [built]
-[ID5O] ./FancyButton/FancyButton.jsx 735 bytes {1} [built]
-[R9Rm] ./Counter/Counter.css 195 bytes {1} [built]
-[UIfB] ./CounterIcon/index.js 68 bytes {1} [built]
-[ZeO0] ./Logo/Logo.css 172 bytes {1} [built]
-[Zj6M] ./Counter/index.js 56 bytes {1} [built]
-[cAlD] ./Logo/index.js 47 bytes {1} [built]
-[hbbU] ./CounterIcon/CounterIcon.jsx 256 bytes {1} [built]
-[iOUn] ./app.jsx 4.65 kB {1} [built]
-[j63z] ./Logo/Logo.jsx 404 bytes {1} [built]
-[mRXm] ./FancyButton/index.js 68 bytes {1} [built]
-[pFpb] ./App/App.jsx 3.03 kB {1} [built]
-[pOmE] ./Counter/Counter.jsx 3.29 kB {1} [built]
-[u7Py] ./FancyButton/FancyButton.css 225 bytes {1} [built]
-[wHmC] ./App/index.js 44 bytes {1} [built]
-    + 228 hidden modules
+Time: 6005ms
+                                   Asset       Size  Chunks                    Chunk Names
+    counter-icon.b80e6341186a53146633.js  403 bytes       3  [emitted]         counter-icon
+                                  bg.jpg     297 kB          [emitted]  [big]  
+                 fontawesome-webfont.svg     444 kB          [emitted]  [big]  
+                 fontawesome-webfont.ttf     166 kB          [emitted]         
+                fontawesome-webfont.woff      98 kB          [emitted]         
+               fontawesome-webfont.woff2    77.2 kB          [emitted]         
+         counter.b00f200a7f40895ec992.js    2.26 kB       0  [emitted]         counter
+          vendor.33a918afa1f4746982bd.js     173 kB       1  [emitted]         vendor
+             app.e27fd7094aed83a26087.js    6.19 kB       2  [emitted]         app
+                 fontawesome-webfont.eot     166 kB          [emitted]         
+        manifest.ce0ab1ce0ae334022983.js    1.58 kB       4  [emitted]         manifest
+                                 app.css    9.07 kB       2  [emitted]         app
+     counter.b00f200a7f40895ec992.js.map    3.22 kB       0  [emitted]         counter
+      vendor.33a918afa1f4746982bd.js.map     593 kB       1  [emitted]         vendor
+         app.e27fd7094aed83a26087.js.map    8.38 kB       2  [emitted]         app
+                             app.css.map   84 bytes       2  [emitted]         app
+counter-icon.b80e6341186a53146633.js.map  858 bytes       3  [emitted]         counter-icon
+    manifest.ce0ab1ce0ae334022983.js.map    8.01 kB       4  [emitted]         manifest
+                              index.html  563 bytes          [emitted]         
+[+VC3] ./Loading/Loading.jsx 756 bytes {2} [built]
+[04Qr] ./App/App.css 93 bytes {2} [built]
+[7MY+] ./Loading/index.js 56 bytes {2} [built]
+[ID5O] ./FancyButton/FancyButton.jsx 735 bytes {2} [built]
+[UIfB] ./CounterIcon/index.js 68 bytes {3} [built]
+[Zj6M] ./Counter/index.js 56 bytes {0} [built]
+[cAlD] ./Logo/index.js 47 bytes {2} [built]
+[cqSv] ./withLoadable.js 223 bytes {2} [built]
+[iOUn] ./app.jsx 4.65 kB {2} [built]
+[j63z] ./Logo/Logo.jsx 404 bytes {2} [built]
+[mRXm] ./FancyButton/index.js 68 bytes {2} [built]
+[pFpb] ./App/App.jsx 3.15 kB {2} [built]
+[pOmE] ./Counter/Counter.jsx 3.42 kB {0} [built]
+[u7Py] ./FancyButton/FancyButton.css 225 bytes {2} [built]
+[wHmC] ./App/index.js 44 bytes {2} [built]
+    + 232 hidden modules
 Child html-webpack-plugin for "index.html":
      1 asset
     [mN3x] ../node_modules/html-webpack-plugin/lib/loader.js!./index.html 659 bytes {0} [built]

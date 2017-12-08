@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Logo from '../Logo';
 import FancyButton from '../FancyButton';
-import Counter from '../Counter';
+import withLoadable from '../withLoadable';
 
 import styles from './App.css';
+
+const Counter = withLoadable(() => import(/* webpackChunkName: "counter" */ '../Counter'));
 
 class App extends Component {
   constructor(props) {

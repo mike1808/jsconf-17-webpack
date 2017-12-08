@@ -25,6 +25,7 @@ const commonConfig = merge([
     },
     output: {
       filename: '[name].[chunkhash].js',
+      chunkFilename: '[name].[chunkhash].js',
       publicPath: '/',
       path: paths.dist,
     },
@@ -49,6 +50,7 @@ const commonConfig = merge([
         }],
         '@babel/react',
       ],
+      plugins: ['@babel/plugin-syntax-dynamic-import'],
     },
   }),
   parts.loadFonts({
