@@ -20,6 +20,33 @@ The steps are implemented via git tags.
 - 11.0-code-versioning
 - 12.0-analyze
 
+
+## Install
+
+```sh
+$ npm install
+```
+
+### libpng issues
+
+Because of image-loader installing on some versions of OSX may raise errors with a [missing libpng dependency](https://github.com/tcoopman/image-webpack-loader/issues/51#issuecomment-273597313):
+```
+Module build failed: Error: dyld: Library not loaded: /usr/local/opt/libpng/lib/libpng16.16.dylib
+```
+This can be remedied by installing the newest version of libpng with [homebrew](http://brew.sh/):
+
+```sh
+brew install libpng
+```
+
+For Ubuntu see [#95](https://github.com/tcoopman/image-webpack-loader/issues/95)
+
+```sh
+wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb \
+  && sudo dpkg -i /tmp/libpng12.deb \
+  && rm /tmp/libpng12.deb
+```
+
 ## Materials
 
 Presentation [mike1808/jsconf-17-webpack-presentation](https://github.com/mike1808/jsconf-17-webpack-presentation)
