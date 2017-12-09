@@ -1,7 +1,20 @@
 # Armenia JSConf 17 Webpack Production Config
 
 This a step-by-step guide for creating a production ready Webpack config.
-The steps are implemented via git tags.
+The steps are implemented via git tags. Clone the repository and go to
+the tag via
+
+```sh
+git checkout tagname
+```
+
+To see what's had been added in the tag do:
+
+```sh
+git show tagname
+```
+
+Tags list can be viewed via `git tag`:
 
 - 1.0-inital-project
 - 2.0-code-minification
