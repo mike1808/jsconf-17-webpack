@@ -8,7 +8,7 @@
     "build": "webpack --config config/webpack.config.js --env production",
     "stats": "webpack --config config/webpack.config.js --env production --profile --json > stats.json",
     "start": "webpack-dev-server --config config/webpack.config.js",
-    "serve": "serve -p 3000 -s",
+    "serve": "serve -p 3000 -s dist",
     "lint": "eslint --ext js,jsx src"
   },
   "repository": {

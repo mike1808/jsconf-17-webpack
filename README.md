@@ -53,6 +53,15 @@ Presentation [mike1808/jsconf-17-webpack-presentation](https://github.com/mike18
 
 Video: TBD
 
+## NPM Scripts
+
+- build - build dist assets, add `--analyze` to start bundle analyzer
+- stats - build dist assets and output profiling stats to stats.json
+- start - starts dev server
+- serve - serve dist folder
+- lint - run the eslint
+
+
 ## Output
 
 ```bash
